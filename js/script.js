@@ -16,7 +16,8 @@ function formValid() {
     document.body.scrollTop=0;
     document.documentElement.scrollTop=0;
 // conditions
-    if (fullName.length == 0 ) {
+
+    if (fullName.length == 0 || fullName.length==1) {
       message.innerText = "Enter your Full name";
       message.style.display = "block";
       return false;
@@ -46,13 +47,12 @@ function formValid() {
 else {
       successMessage.innerText = "You have successfully created an account";
       successMessage.style.display = "block";
-      alert("Success");
-      head.innerText=" Login Now !!!";
-      nameSection.display ="none";
+      alert("Success!! You can now login");
       window.open("login.html");
       return false;
     }
   }
+
   function loginFormValid(){
     const message = document.getElementById('message');
     const mail = document.getElementById('email').value;
@@ -70,6 +70,8 @@ else {
         return false;
       }
       else{
+        window.alert('You are now logged in')
+        window.open('index.html');
         return false;
       }
   }
