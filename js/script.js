@@ -56,7 +56,7 @@ else {
   function loginFormValid(){
     const message = document.getElementById('message');
     const mail = document.getElementById('email').value;
-    const pass1 = document.getElementById('password1').value;
+    const pass1 = document.getElementById('password').value;
     if (
         /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail) == false
       ) {
